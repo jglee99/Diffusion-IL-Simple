@@ -1,6 +1,4 @@
-from argparse import ArgumentParser
 import os
-from collections import OrderedDict
 from itertools import product
 
 import pickle
@@ -14,15 +12,14 @@ from torchvision import transforms
 from sklearn.cluster import KMeans
 from sklearn.neighbors import KernelDensity
 
-from models import (
-    Model_cnn_mlp,
+from models import Model_cnn_mlp, Model_Cond_Diffusion
+from other_models import (
     Model_Cond_Discrete,
     Model_Cond_MSE,
     Model_Cond_MeanVariance,
-    Model_Cond_Diffusion,
     Model_Cond_BeT,
     Model_Cond_Kmeans,
-    Model_Cond_EBM
+    Model_Cond_EBM,
 )
 
 DATASET_PATH = "dataset"
